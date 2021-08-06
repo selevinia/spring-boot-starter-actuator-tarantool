@@ -1,0 +1,1 @@
+rootProject.name = "selevinia-spring-boot-starter-actuator-tarantool"

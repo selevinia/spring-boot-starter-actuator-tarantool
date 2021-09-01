@@ -18,7 +18,6 @@ public class TarantoolCacheMeterBinderProviderAutoConfigurationTest {
 
     private final ApplicationContextRunner contextRunner = new ApplicationContextRunner()
             .withPropertyValues(
-                    "management.metrics.use-global-registry=false",
                     "selevinia.cache.tarantool.enabled=true",
                     "selevinia.cache.tarantool.cache-names=cache1,cache2"
             )

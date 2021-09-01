@@ -27,6 +27,7 @@ dependencies {
 ## Learn more
 
 - [Spring Data Tarantool](https://github.com/selevinia/spring-data-tarantool)
+- [Spring Boot Cache Tarantool Starter](https://github.com/selevinia/spring-boot-starter-cache-tarantool)
 - [Spring Boot Data Tarantool Starter](https://github.com/selevinia/spring-boot-starter-data-tarantool)
 - [Reactive Spring Boot Data Tarantool Starter](https://github.com/selevinia/spring-boot-starter-data-tarantool-reactive)
 

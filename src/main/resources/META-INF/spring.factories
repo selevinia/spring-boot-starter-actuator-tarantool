@@ -1,3 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   org.springframework.boot.actuate.autoconfigure.tarantool.TarantoolHealthContributorAutoConfiguration,\
-  org.springframework.boot.actuate.autoconfigure.tarantool.TarantoolReactiveHealthContributorAutoConfiguration
+  org.springframework.boot.actuate.autoconfigure.tarantool.TarantoolReactiveHealthContributorAutoConfiguration, \
+  org.springframework.boot.actuate.autoconfigure.metrics.cache.TarantoolCacheMeterBinderProviderAutoConfiguration

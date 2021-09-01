@@ -1,5 +1,5 @@
 group = "io.github.selevinia"
-version = "0.2.0"
+version = "0.3.0"
 description = "Spring boot starter for Actuator for Tarantool Database"
 
 plugins {
@@ -21,14 +21,14 @@ configure<JavaPluginConvention> {
 dependencies {
     api("org.springframework.boot:spring-boot-starter-actuator:2.5.2")
 
-    compileOnly("io.github.selevinia:selevinia-spring-boot-starter-data-tarantool:0.2.0")
-    compileOnly("io.github.selevinia:selevinia-spring-boot-starter-data-tarantool-reactive:0.2.0")
+    compileOnly("io.github.selevinia:selevinia-spring-boot-starter-data-tarantool:0.3.0")
+    compileOnly("io.github.selevinia:selevinia-spring-boot-starter-data-tarantool-reactive:0.3.0")
 
     annotationProcessor("org.springframework.boot:spring-boot-autoconfigure-processor:2.5.2")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor:2.5.2")
 
-    testImplementation("io.github.selevinia:selevinia-spring-boot-starter-data-tarantool:0.2.0")
-    testImplementation("io.github.selevinia:selevinia-spring-boot-starter-data-tarantool-reactive:0.2.0")
+    testImplementation("io.github.selevinia:selevinia-spring-boot-starter-data-tarantool:0.3.0")
+    testImplementation("io.github.selevinia:selevinia-spring-boot-starter-data-tarantool-reactive:0.3.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test:2.5.2")
     testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
     testImplementation("org.assertj:assertj-core:3.20.2")

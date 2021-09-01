@@ -4,16 +4,17 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.actuate.tarantool.TarantoolHealthIndicator;
 import org.springframework.boot.autoconfigure.AutoConfigurations;
 import org.springframework.boot.autoconfigure.data.tarantool.TarantoolAutoConfiguration;
+import org.springframework.boot.autoconfigure.data.tarantool.TarantoolConversionAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.tarantool.TarantoolDataAutoConfiguration;
 import org.springframework.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class TarantoolHealthContributorAutoConfigurationTest {
+public class TarantoolHealthContributorAutoConfigurationTest {
 
     private final ApplicationContextRunner contextRunner = new ApplicationContextRunner()
-            .withConfiguration(AutoConfigurations.of(TarantoolAutoConfiguration.class, TarantoolDataAutoConfiguration.class,
-                    TarantoolReactiveHealthContributorAutoConfiguration.class, TarantoolHealthContributorAutoConfiguration.class));
+            .withConfiguration(AutoConfigurations.of(TarantoolAutoConfiguration.class, TarantoolConversionAutoConfiguration.class,
+                    TarantoolDataAutoConfiguration.class, TarantoolReactiveHealthContributorAutoConfiguration.class, TarantoolHealthContributorAutoConfiguration.class));
 
     @Test
     void shouldCreateIndicator() {

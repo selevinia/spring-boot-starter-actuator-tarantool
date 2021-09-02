@@ -43,18 +43,6 @@ public class TarantoolCacheMetricsTest {
 
     @Test
     void cacheStatisticsAreExposed() {
-        ApplicationContextRunner contextRunner = new ApplicationContextRunner()
-                .withConfiguration(AutoConfigurations.of(
-                        TarantoolCacheAutoConfiguration.class,
-                        CacheAutoConfiguration.class
-                ))
-                .withUserConfiguration(TestCachingConfiguration.class)
-                .withPropertyValues(
-                        "selevinia.cache.tarantool.enabled=true",
-                        "selevinia.cache.tarantool.cache-names=cache1,cache2",
-                        "selevinia.cache.tarantool.enable-statistics=true"
-                );
-
         contextRunner.run(withCacheMetrics((cache, meterRegistry) -> {
             assertThat(meterRegistry.find("cache.size").tags(TAGS).functionCounter()).isNull();
             assertThat(meterRegistry.find("cache.gets").tags(TAGS.and("result", "hit")).functionCounter()).isNotNull();
